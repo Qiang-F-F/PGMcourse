@@ -188,6 +188,25 @@ p(t) = \lambda p_{Poisson}(0|\lambda)=\lambda e^{-\lambda t}
 $$
 
 >Beta distribution (probability distribution)
-
+$$
+\begin{aligned}
+\bold X&\sim beta(x|\alpha,\beta)\\
+p(x|\alpha,\beta)&=\frac{1}{B(\alpha,\beta)}x^{\alpha-1}(1-x)^{\beta-1}
+\end{aligned}
+$$
+where $B(\alpha,\beta)=\frac{\Gamma(\alpha)\Gamma(\beta)}{\Gamma(\alpha+\beta)}$
+Normally we use beta distribution to describe the dsitribution of a probability. And when $\alpha = \beta = 1$,  this is a uniform distribution. And 
+$$
+E(p) = \frac{\alpha}{\alpha+\beta}
+$$
 >Dirichlet distribution (probability vector distribution)
+$$
+\begin{aligned}
+\bold X &\sim Dir(x_1,x_2,\dots,x_K|\alpha_1,\alpha_2,\dots,\alpha_K)\\
+p(x_1,x_2,\dots ,x_K)&=\frac{1}{B(\alpha_1,\alpha_2,\dots,\alpha_K)}\prod_{i=1}^Kx_i^{\alpha_i-1}
+\end{aligned}$$
+where
+$$
+B(\alpha_1,\alpha_2,\dots,\alpha_K) = \frac{\prod_{i=1}^K\Gamma(\alpha_i)}{\Gamma(\sum_{i=1}^K\alpha_i)}
+$$
 ## Optimization
